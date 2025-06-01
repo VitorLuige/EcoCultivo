@@ -1,0 +1,79 @@
+/* Estilização do pop-up confirmar saída */
+.modalConfirmarSaida {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-saida {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--cinza_escuro);
+  color: var(--off_white);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.popup-tituloSaida {
+  font-size: 1.625rem;
+  font-family: fontPoppinsBold;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mensagem-saida {
+  font-size: 1rem;
+  font-family: fontPoppinsBold;
+  margin-bottom: 1.5rem;
+}
+
+.botoes-saida {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.botao-sair,
+.botao-cancelar {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-family: fontPoppinsBold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.botao-sair {
+  background-color: var(--carvao);
+  color: var(--off_white);
+}
+
+.botao-sair:hover {
+  background-color: #b71c1c;
+  color: #fff;
+}
+
+.botao-cancelar {
+  background-color: transparent;
+  color: var(--verde_acinzentado);
+  border: 1.5px solid var(--verde_acinzentado);
+}
+
+.botao-cancelar:hover {
+  background-color: var(--verde_acinzentado);
+  color: var(--carvao);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | EcoCultivo</title>
+    <link rel="stylesheet" href="/assets/css/pages/autenticacao/login.css" />
+  </head>
+  <body>
+    <section class="login-container">
+      <div class="login-card">
+        <div class="icon">
+          <img src="/assets/imgs/FotoEdelweiss.svg" alt="Ícone do EcoCultivo" />
+        </div>
+        <h1>EcoCultivo</h1>
+        <p>Realize o login para entrar no nosso aplicativo.</p>
+
+        <form>
+          <div class="input-field">
+            <img
+              src="/assets/imgs/emoji carta.svg"
+              alt="emoji carta"
+              id="emojiCarta"
+            />
+            <input type="email" placeholder="E-mail" required />
+          </div>
+
+          <div class="input-field">
+            <img
+              src="/assets/imgs/emoji cadeado.svg"
+              alt="emoji cadeado"
+              id="emojiCadeado"
+            />
+            <input type="password" id="password" placeholder="Senha" required />
+            <img
+              id="togglePassword"
+              class="toggle-password"
+              data-target="password"
+              src="/assets/imgs/eye-off.svg"
+            />
+          </div>
+
+          <div class="remember-forgot">
+            <div class="remember-me">
+              <input type="checkbox" id="remember" class="custom-checkbox" />
+              <label for="remember">Lembrar-me</label>
+            </div>
+            <div class="options">
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+          </div>
+
+          <button type="submit">Entrar</button>
+        </form>
+
+        <p class="texto-registro">
+          Ainda não tem conta? <a href="/cadastro.html">Registre-se</a>
+        </p>
+      </div>
+    </section>
+    <script src="/assets/js/auth.js"></script>
+  </body>
+</html>

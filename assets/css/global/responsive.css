@@ -1,0 +1,23 @@
+/* TESTE */
+/* Telas de autenticação */
+@media (max-width: 768px) {
+  .login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* mantém apenas o box do login/cadastro visível */
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+  }
+}
+
+/* Sidebar */
+
+/* Botão para abrir o menu */
+
+/* Tela inicial */

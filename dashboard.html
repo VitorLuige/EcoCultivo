@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | EcoCultivo</title>
+
+    <link rel="stylesheet" href="/assets/css/pages/dashboard/dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar-menu">
+      <!-- Abre/fecha -->
+      <button id="toggleSidebar" class="toggle-button">
+        <img src="/assets/imgs//menu.svg" alt="Ícone do menu" />
+        <span class="nav-text">Painel</span>
+      </button>
+
+      <!-- Logo -->
+      <a href="#" class="container-logo">
+        <img src="/assets/imgs/logo.svg" alt="Logo do sistema" />
+      </a>
+
+      <!-- links de navegação -->
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="selected">
+            <img src="/assets/imgs/house.svg" alt="Ícone dashboard" />
+            <span class="nav-text">Tela inicial</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/monitoramento.html" class="">
+            <img
+              src="/assets/imgs/monitoramento.svg"
+              alt="Ícone monitoramento"
+            />
+            <span class="nav-text">Monitoramento</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/historico.html" class="">
+            <img src="/assets/imgs/clock.svg" alt="Ícone histórico" />
+            <span class="nav-text">Histórico</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="open-config">
+            <img src="/assets/imgs/settings.svg" alt="Ícone configurações" />
+            <span class="nav-text">Configurações</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown-container">
+          <a href="#" class="nav-link dropdown-toggle" id="toggleAccessibility">
+            <img
+              src="/assets/imgs/acessibilidade.svg"
+              alt="Ícone acessibilidade"
+            />
+            <span class="nav-text">Acessibilidade</span>
+            <span class="arrow">&#9652;</span>
+          </a>
+          <!-- submenu -->
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+              <a class="nav-link dropdown-title"
+                >Alto contraste
+                <input type="checkbox" id="toggleContrast" />
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" id="btn-sair">
+            <img src="/assets/imgs/log-out.svg" alt="Ícone sair" />
+            <span class="nav-text">Sair</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Rodapé -->
+      <ul class="sidebar-footer">
+        <li>
+          <div class="container-user">
+            <img src="/assets/imgs/fotoUsuario.png" alt="Foto do usuário" />
+          </div>
+          <div class="user-content">
+            <p class="user-name">Nome do usuário</p>
+            <p class="user-email">E-mail do usuário</p>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="bg-tela-inicial">
+      <section class="tela-inicial-content">
+        <div class="container-plataforma">
+          <div class="container-platafoma-txt">
+            <h1>Plataforma de monitoramento de dados da planta Edelweiss</h1>
+          </div>
+        </div>
+
+        <div class="box-grafico-principal">
+          <div class="grafico">
+            <div class="titulo-grafico">
+              <h3>AMPLITUDE TÉRMICA</h3>
+            </div>
+            <div id="grafico-principal"></div>
+            <!-- Atualizar no Django -->
+          </div>
+        </div>
+
+        <div class="box-grafico-2">
+          <div class="grafico-2">
+            <div class="titulo-grafico-2">
+              <h3>UMIDADE RELATIVA</h3>
+            </div>
+            <div id="grafico-2"></div>
+            <!-- Atualizar no Django -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal p/configurações -->
+
+    <!-- Modal p/confirmar saída -->
+    <div id="modalSair" class="modalConfirmarSaida">
+      <div class="popup-saida">
+        <div class="popup-tituloSaida">
+          <img src="/assets/imgs/circle-alert.svg" alt="Atenção" />
+          <span>Confirmar saída?</span>
+        </div>
+
+        <form id="formSair" method="post">
+          <p class="mensagem-saida">Tens certeza que deseja sair?</p>
+
+          <div class="botoes-saida">
+            <button type="button" class="botao-sair" id="btn-confirmar">
+              Sim, desejo sair!
+            </button>
+            <button type="button" class="botao-cancelar" id="btn-cancelar">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/popup.js"></script>
+  </body>
+</html>

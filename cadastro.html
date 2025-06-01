@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | EcoCultivo</title>
+    <link rel="stylesheet" href="/assets/css/pages/autenticacao/cadastro.css" />
+  </head>
+  <body>
+    <section class="login-container">
+      <div class="login-card">
+        <div class="icon">
+          <img src="/assets/imgs/FotoEdelweiss.svg" alt="Ícone do EcoCultivo" />
+        </div>
+        <h1>EcoCultivo</h1>
+        <p>Realize seu cadastro para fazer parte do nosso aplicativo.</p>
+
+        <form id="formCadastro">
+          <div class="input-field">
+            <img src="/assets/imgs/emoji carta.svg" alt="Ícone e-mail" />
+            <input type="email" placeholder="Seu melhor e-mail" required />
+          </div>
+
+          <div class="input-field">
+            <img src="/assets/imgs/lock.svg" alt="Ícone senha" />
+            <input
+              type="password"
+              id="senha"
+              placeholder="Insira uma senha"
+              required
+            />
+            <img
+              class="toggle-password"
+              data-target="senha"
+              src="/assets/imgs/eye-off.svg"
+            />
+          </div>
+
+          <div class="input-field">
+            <img src="/assets/imgs/lock.svg" alt="Ícone repetir senha" />
+            <input
+              type="password"
+              id="confirmarSenha"
+              placeholder="Repetir senha"
+              required
+            />
+            <img
+              class="toggle-password"
+              data-target="confirmarSenha"
+              src="/assets/imgs/eye-off.svg"
+            />
+          </div>
+
+          <span id="erro-senha" class="mensagem-erro"
+            >ERRO: AS SENHAS NÃO COINCIDEM.</span
+          >
+
+          <button type="submit">Cadastrar-se</button>
+        </form>
+
+        <p class="texto-registro">
+          Já possui uma conta? <a href="/login.html">Clique aqui!</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="/assets/js/auth.js"></script>
+  </body>
+</html>
