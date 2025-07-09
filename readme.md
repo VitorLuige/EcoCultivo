@@ -38,6 +38,42 @@ O projeto foi desenvolvido como parte da disciplina de Desenvolvimento de Sistem
 
 ---
 
+---
+
+## 🏛️ Arquitetura Detalhada
+
+O projeto é estruturado de forma modular para garantir a separação de responsabilidades e facilitar a manutenção.
+
+### Modelos de Dados (`models.py`)
+
+A base de dados é composta por 3 modelos principais:
+
+1.  **`Usuario (autenticacao)`**: Herda do `AbstractBaseUser` do Django para um controle total sobre os campos. O `email` é usado como campo de login principal. Armazena informações de perfil como `nome`, `foto_perfil` e os dados de geolocalização (`cidade`, `latitude`, `longitude`).
+2.  **`RegistroCrescimento (core)`**: Vinculado a um `Usuario` através de uma `ForeignKey`, este modelo armazena os logs manuais do usuário sobre o crescimento da planta, incluindo `altura_cm`, `numero_folhas`, `anotacoes` e uma `foto_planta`.
+3.  **`UmidadeDiaria (core)`**: Modelo utilizado para simular dados diários de umidade para o gráfico do dashboard. Cada registro é vinculado a um `Usuario` e a uma `data` específica.
+
+### APIs Internas Criadas (`views.py` e `urls.py`)
+
+Para permitir a comunicação dinâmica entre o front-end e o back-end sem a necessidade de recarregar a página, duas APIs internas foram criadas:
+
+* **`GET /api/search-city/`**
+    * **Função:** Busca cidades com base em uma query do usuário.
+    * **Parâmetros:** `q` (nome da cidade), `state` (nome do estado).
+    * **Lógica:** Recebe os parâmetros, consulta a API externa de geocodificação da Open-Meteo, filtra os resultados por estado no back-end para garantir precisão e retorna uma lista de cidades em formato JSON.
+
+* **`GET /api/weather/`**
+    * **Função:** Busca a previsão do tempo para a localização salva do usuário.
+    * **Lógica:** Lê a latitude e longitude do perfil do usuário logado, consulta a API de previsão da Open-Meteo e retorna os dados de 7 dias (temperaturas, probabilidade de chuva, etc.) em formato JSON.
+
+### Fluxo de Dados Assíncrono (AJAX)
+
+A aplicação faz uso de chamadas `fetch` em JavaScript para interagir com as APIs internas:
+* **Busca de Cidade:** Ao clicar em "Buscar", o JS chama a `/api/search-city/`, recebe a lista de cidades e a renderiza dinamicamente no modal.
+* **Previsão do Tempo:** Ao carregar o dashboard, o JS chama a `/api/weather/` e popula os cards de previsão e os gráficos com os dados recebidos.
+* **Troca de Senha:** A troca de senha no modal também utiliza `fetch` para enviar os dados ao back-end e exibir mensagens de sucesso ou erro instantaneamente, sem recarregar a página.
+
+---
+
 ## 🚀 Como Rodar o Projeto Localmente
 
 Siga os passos abaixo para configurar e rodar o projeto em seu ambiente de desenvolvimento.
