@@ -1,0 +1,291 @@
+/* Estilização geral da sidebar */
+.sidebar-menu {
+  background-color: var(--cinza_escuro);
+  height: 100vh;
+  padding: 1.2rem;
+  color: var(--verde_acinzentado);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: fontPoppinsBold;
+  transition: all 0.4s ease;
+}
+
+.mobile-footer {
+  display: none;
+}
+
+.mobile-header {
+  display: none;
+}
+
+/* Estilização Painel */
+.toggle-button {
+  background-color: var(--cinza_escuro);
+  color: var(--verde_acinzentado);
+  font-family: fontPoppinsBold;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1.5rem;
+  width: 100%;
+  gap: 0.8rem;
+  position: sticky;
+  top: 0;
+}
+
+.toggle-button:hover {
+  color: var(--off_white);
+  background-color: var(--carvao);
+  border-radius: 12px;
+}
+
+/* Estilização 'sidebar' fechada */
+.sidebar-menu.collapsed {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.sidebar-menu.collapsed .toggle-button {
+  justify-content: center;
+  background-color: var(--cinza_escuro);
+  padding: 0.3rem;
+}
+
+.sidebar-menu.collapsed .toggle-button:hover {
+  color: var(--off_white);
+  background-color: var(--carvao);
+  border-radius: 12px;
+}
+
+.sidebar-menu.collapsed .nav-text,
+.sidebar-menu.collapsed .user-content {
+  display: none;
+}
+
+.sidebar-menu.collapsed .nav-links a {
+  justify-content: center;
+  padding: 0.6rem 0;
+  transition: all 0.4s ease;
+}
+
+.sidebar-menu.collapsed .container-logo img {
+  content: url("../../../../../assets/imgs/logoEdelweissAtt.svg");
+  transition: all 0.4s ease;
+}
+
+.sidebar-menu.collapsed .sidebar-footer li {
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.sidebar-menu.collapsed .container-user {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Estilização da Logo e da navegação */
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.6rem;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid rgba(232, 245, 233, 0.2);
+  box-shadow: inset 0 -1px 0 rgba(232, 245, 233, 0.2);
+}
+
+.sidebar-menu .nav-links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.1rem;
+  width: 100%;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: var(--verde_acinzentado);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 1.5rem;
+  width: 100%;
+  gap: 0.8rem;
+  border-radius: 12px;
+  transition-property: color, background-color, fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.nav-links li .selected,
+.nav-links a:hover {
+  color: var(--off_white);
+  background-color: var(--carvao);
+  fill: var(--verde_acinzentado);
+}
+
+/* Estilização do Rodapé */
+.sidebar-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(232, 245, 233, 0.2);
+  box-shadow: inset 0 1px 0 rgba(232, 245, 233, 0.2);
+  margin-top: auto;
+}
+
+.sidebar-footer li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 1rem;
+}
+
+.container-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.container-user img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.sidebar-footer .user-content {
+  font-family: fontPoppinsBold;
+  color: var(--verde_acinzentado);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.sidebar-footer .user-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.sidebar-footer .user-email {
+  font-size: 0.65rem;
+  color: #ccc;
+}
+
+/* Estilização do dropdown */
+.dropdown-container .arrow {
+  margin-left: auto;
+  position: relative;
+  top: 1px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 6%;
+  background: var(--cinza_escuro);
+  border-radius: 12px;
+  display: none;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  font-size: 12px;
+  color: var(--verde_acinzentado);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  width: 100%;
+  gap: 0.8rem;
+  border-radius: 12px;
+  transition-property: color, background-color, fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.arrow.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* Estilização do dropdown quando 'sidebar' colapsada*/
+.sidebar-menu.collapsed .dropdown-menu a {
+  font-size: 12px;
+  color: var(--verde_acinzentado);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0rem 0rem;
+  width: 100%;
+  gap: 0.8rem;
+  border-radius: 12px;
+  transition-property: color, background-color, fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.sidebar-menu.collapsed .dropdown-container .arrow {
+  margin-left: auto;
+  position: relative;
+  padding-left: 2.2rem;
+}
+
+.sidebar-menu.collapsed .dropdown-toggle img {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+}
+
+.sidebar-menu.collapsed .dropdown-menu {
+  position: absolute;
+  left: 2.8%;
+  background: var(--cinza_escuro);
+}
+
+.sidebar-menu.collapsed .dropdown-menu.active .dropdown-title {
+  padding: 0.2rem 0.6rem;
+  font-size: 12px;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Estilização da checkbox */
+.dropdown-title input[type="checkbox"] {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--verde_acinzentado);
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.dropdown-title input[type="checkbox"]:checked {
+  background-color: var(--carvao);
+  border-color: var(--carvao);
+}
+
+.dropdown-title input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: var(--off_white);
+  font-size: 11px;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+}

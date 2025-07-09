@@ -1,0 +1,214 @@
+/* Arquivo unificado para login e cadastro */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../../../assets/imgs/Gradiente.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  border: solid 1px rgba(232, 245, 233, 0.25);
+  padding: 25px 35px;
+  width: 400px;
+  color: var(--cinza_escuro);
+  align-items: center;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.icon img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+  margin-bottom: -20px;
+}
+
+p {
+  font-family: fontPoppinsRegular;
+  font-size: 18px;
+  color: var(--cinza_escuro);
+  padding-bottom: 16px;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 45px 12px 45px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--verde_acinzentado);
+  font-family: fontOpenSansRegular;
+  font-size: 18px;
+  color: var(--carvao);
+}
+
+.input-field input:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--azul_petroleo);
+}
+
+.input-field img:first-child {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+
+.input-field #togglePassword,
+.input-field .toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.input-field .toggle-password:hover {
+  opacity: 1;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--cinza_escuro);
+  border-radius: 4px;
+  margin-right: 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: var(--carvao);
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--branco);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.remember-me label {
+  font-family: fontOpenSansBold;
+  font-size: 14px;
+  color: var(--cinza_escuro);
+  cursor: pointer;
+}
+
+.options {
+  text-align: right;
+}
+
+.options a {
+  font-family: fontOpenSansBold;
+  color: var(--cinza_escuro);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+  color: var(--cinza_escuro);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--carvao);
+  color: var(--verde_acinzentado);
+  font-family: fontInterRegular;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cinza_escuro);
+}
+
+.texto-registro {
+  color: var(--cinza_escuro);
+  font-family: fontOpenSansBold;
+  font-size: 14px;
+}
+
+.texto-registro a {
+  color: var(--cinza_escuro);
+  font-family: fontOpenSansBold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.texto-registro a:hover {
+  text-decoration: underline;
+  color: var(--cinza_escuro);
+}
+
+.mensagem-erro {
+  display: block !important; /* A MUDANÇA MAIS IMPORTANTE! Garante que seja visível. */
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  color: #c62828; /* Vermelho escuro para o texto */
+  background-color: #ffcdd2; /* Fundo rosa claro */
+  border: 1px solid #c62828; /* Borda vermelha escura */
+
+  font-family: fontPoppinsBold, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}

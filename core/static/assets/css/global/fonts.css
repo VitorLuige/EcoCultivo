@@ -1,0 +1,35 @@
+@font-face {
+  font-family: fontInterBold;
+  src: url(../../../assets/fonts/Inter_18pt-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: fontInterRegular;
+  src: url(../../../assets/fonts/Inter_18pt-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: fontOpenSansRegular;
+  src: url(../../../assets/fonts/OpenSans-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: fontPoppinsBold;
+  src: url(../../../assets/fonts/Poppins-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: fontPoppinsRegular;
+  src: url(../../../assets/fonts/Poppins-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: fontOpenSansBold;
+  src: url(../../../assets/fonts/OpenSans-Bold.ttf);
+  font-display: swqap;
+}

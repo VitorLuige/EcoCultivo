@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erro Interno do Servidor | EcoCultivo</title>
+    <link rel="stylesheet" href="{% static 'assets/css/pages/erros/estilos-erro.css' %}" />
+</head>
+<body class="bg-tela-error error-500">
+    <div class="error-container">
+        <div class="error-content">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+            <h1 class="error-title">Erro Interno do Servidor</h1>
+            <p class="error-message">Ocorreu um problema em nossos servidores. Nossa equipe já foi notificada. Por favor, tente novamente mais tarde.</p>
+            <a href="{% url 'dashboard' %}" class="btn-back-dashboard">Voltar para a Tela Inicial</a>
+        </div>
+    </div>
+</body>
+</html>

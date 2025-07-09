@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | EcoCultivo</title>
+    <link rel="stylesheet" href="{% static 'assets/css/pages/autenticacao/partials/auth.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/global/global.css' %}" />
+  </head>
+  <body>
+    <section class="login-container">
+      <div class="login-card">
+        <div class="icon">
+          <img src="{% static 'assets/imgs/LogoEcoCultivo.svg' %}" alt="Ícone do EcoCultivo" />
+        </div>
+        <p>Realize seu cadastro para fazer parte do nosso aplicativo.</p>
+
+        <form id="formCadastro" method="POST">
+          {% csrf_token %}
+
+          {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+              <p class="mensagem-erro">{{ error }}</p>
+            {% endfor %}
+          {% endif %}
+          
+          <div class="input-field">
+            <img src="{% static 'assets/imgs/emoji carta.svg' %}" alt="Ícone e-mail" />
+            {{ form.email }}
+          </div>
+          {% for error in form.email.errors %}<p class="mensagem-erro">{{ error }}</p>{% endfor %}
+
+          <div class="input-field">
+            <img src="{% static 'assets/imgs/lock.svg' %}" alt="Ícone senha" />
+            {{ form.password }}
+            <img class="toggle-password" data-target="id_password" src="{% static 'assets/imgs/eye-off.svg' %}" alt="Mostrar/ocultar senha"/>
+          </div>
+           {% for error in form.password.errors %}<p class="mensagem-erro">{{ error }}</p>{% endfor %}
+           
+          <div class="input-field">
+            <img src="{% static 'assets/imgs/lock.svg' %}" alt="Ícone repetir senha" />
+            {{ form.password2 }}
+            <img class="toggle-password" data-target="id_password2" src="{% static 'assets/imgs/eye-off.svg' %}" alt="Mostrar/ocultar senha"/>
+          </div>
+          {% for error in form.password2.errors %}<p class="mensagem-erro">{{ error }}</p>{% endfor %}
+          
+          <button type="submit">Cadastrar-se</button>
+        </form>
+
+        <p class="texto-registro">
+          Já possui uma conta?
+          <a href="{% url 'autenticacao:login' %}">Clique aqui!</a>
+        </p>
+      </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".toggle-password").forEach((icon) => {
+                icon.addEventListener("click", function () {
+                    const targetId = this.getAttribute("data-target");
+                    const input = document.getElementById(targetId);
+                    if (input && input.type === "password") {
+                        input.type = "text";
+                        this.src = "{% static 'assets/imgs/eye.svg' %}";
+                    } else if (input) {
+                        input.type = "password";
+                        this.src = "{% static 'assets/imgs/eye-off.svg' %}";
+                    }
+                });
+            });
+        });
+    </script>
+  </body>
+</html>

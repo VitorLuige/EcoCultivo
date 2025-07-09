@@ -1,0 +1,371 @@
+/* Estilização do pop-up confirmar saída */
+.modalConfirmarSaida {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-saida {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--cinza_escuro);
+  color: var(--off_white);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.popup-tituloSaida {
+  font-size: 1.625rem;
+  font-family: fontPoppinsBold;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mensagem-saida {
+  font-size: 1rem;
+  font-family: fontPoppinsBold;
+  margin-bottom: 1.5rem;
+}
+
+.botoes-saida {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.botao-sair,
+.botao-cancelar {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-family: fontPoppinsBold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.botao-sair {
+  background-color: var(--carvao);
+  color: var(--off_white);
+}
+
+.botao-sair:hover {
+  background-color: #b71c1c;
+  color: #fff;
+}
+
+.botao-cancelar {
+  background-color: transparent;
+  color: var(--verde_acinzentado);
+  border: 1.5px solid var(--verde_acinzentado);
+}
+
+.botao-cancelar:hover {
+  background-color: var(--verde_acinzentado);
+  color: var(--carvao);
+}
+
+/* Estilização do modal configurações do usuário */
+.modalConfig {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-config {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: var(--cinza_escuro);
+  color: var(--off_white);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  max-height: 90vh;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.popup-config::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.popup-tituloConfig {
+  font-size: 1.625rem;
+  font-family: fontPoppinsBold;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--verde_acinzentado);
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.popup-tituloConfig img {
+  width: 28px;
+  height: 28px;
+}
+
+.mensagem-config {
+  font-size: 1rem;
+  font-family: fontPoppinsBold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--verde_acinzentado);
+}
+
+.observacao {
+  font-size: 0.85rem;
+  font-family: fontPoppinsRegular;
+  color: yellow;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.container-config {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.config-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: fontPoppinsRegular;
+  color: var(--off_white);
+}
+
+.config-item input {
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  border: 0.2px solid var(--off_white);
+  background-color: transparent;
+  color: var(--off_white);
+  font-family: fontPoppinsBold;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.config-item input:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--azul_petroleo);
+  border-color: var(--azul_petroleo);
+}
+
+.config-item input::placeholder {
+  color: var(--off_white);
+  opacity: 0.4;
+  font-family: fontPoppinsRegular;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+input[type="file"] {
+  font-size: 0.8rem;
+  cursor: crosshair;
+}
+
+input[type="file"]::file-selector-button {
+  font-size: rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--azul_petroleo);
+  color: var(--verde_acinzentado);
+  font-family: fontPoppinsBold;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: violet;
+  transition: ease 0.2s;
+}
+
+.senha-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.senha-input input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.8rem;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.botoes-config {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.botao-salvar-config,
+.botao-cancelar-config {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-family: fontPoppinsBold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.botao-salvar-config {
+  background-color: var(--carvao);
+  color: var(--off_white);
+}
+
+.botao-salvar-config:hover {
+  background-color: var(--azul_petroleo);
+  color: #fff;
+}
+
+.botao-cancelar-config {
+  background-color: transparent;
+  color: var(--verde_acinzentado);
+  border: 1.5px solid var(--verde_acinzentado);
+}
+
+.botao-cancelar-config:hover {
+  background-color: var(--verde_acinzentado);
+  color: var(--carvao);
+}
+
+.erro-senha {
+  color: red;
+  font-size: 0.9rem;
+  font-family: fontPoppinsRegular;
+  margin-top: 0.5rem;
+  text-align: center;
+  display: none;
+}
+/* ==== Estilos para a Busca de Cidade no Modal ==== */
+.search-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Permite alinhas tudo na mesma linha */
+.search-wrapper input[type="text"],
+.search-wrapper select {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Dropdown de estados */
+.search-wrapper select {
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--off_white);
+  background-color: transparent;
+  color: var(--off_white);
+  font-family: fontPoppinsRegular;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ECEFF1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+/* Estiliza o botão "Buscar" para ser uma ação secundária */
+.search-wrapper button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-family: fontPoppinsBold;
+  font-size: 0.9rem;
+  border: 1.5px solid var(--verde_acinzentado);
+  background-color: transparent;
+  color: var(--verde_acinzentado);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.search-wrapper button:hover {
+  background-color: var(--verde_acinzentado);
+  color: var(--carvao);
+}
+
+/* Estiliza a lista de resultados da busca */
+#city-search-results .city-results-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0.75rem;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  text-align: left;
+}
+
+#city-search-results .city-results-list li {
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+
+#city-search-results .city-results-list li:hover {
+  background-color: var(--azul_petroleo);
+}
+
+/* Mensagens de status da busca */
+#city-search-results .city-search-message {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+#city-search-results .city-search-message.success {
+  color: #4caf50;
+  font-family: fontPoppinsBold;
+}
+
+.search-wrapper select option {
+  background-color: var(--cinza_escuro);
+  color: var(--off_white);
+}

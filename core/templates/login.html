@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | EcoCultivo</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/pages/autenticacao/partials/auth.css' %}?v=1"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/global/global.css' %}?v=1"
+    />
+  </head>
+  <body>
+    <section class="login-container">
+      <div class="login-card">
+        <div class="icon">
+          <img
+            src="{% static 'assets/imgs/LogoEcoCultivo.svg' %}"
+            alt="Ícone do EcoCultivo"
+          />
+        </div>
+        <p>Realize o login para entrar no nosso aplicativo.</p>
+
+        <form method="POST">
+          {% csrf_token %} 
+
+            {% if form.non_field_errors %}
+              {% for error in form.non_field_errors %}
+                <p class="mensagem-erro">{{ error }}</p>
+              {% endfor %}
+            {% endif %}
+            
+          <div class="input-field">
+            <img
+              src="{% static 'assets/imgs/emoji carta.svg' %}"
+              alt="emoji carta"
+            />
+            <input type="email" name="username" placeholder="E-mail" required />
+          </div>
+
+          <div class="input-field">
+            <img
+              src="{% static 'assets/imgs/emoji cadeado.svg' %}"
+              alt="emoji cadeado"
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Senha"
+              required
+            />
+            <img
+              id="togglePassword"
+              class="toggle-password"
+              data-target="password"
+              src="{% static 'assets/imgs/eye-off.svg' %}"
+              alt="Mostrar/ocultar senha"
+            />
+          </div>
+
+          <div class="remember-forgot">
+            <div class="remember-me">
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                class="custom-checkbox"
+              />
+              <label for="remember">Lembrar-me</label>
+            </div>
+            <div class="options">
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+          </div>
+
+          <button type="submit">Entrar</button>
+        </form>
+
+        <p class="texto-registro">
+          Ainda não tem conta?
+          <a href="{% url 'autenticacao:cadastro' %}">Registre-se</a>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const passwordInput = document.getElementById("password");
+      const togglePassword = document.getElementById("togglePassword");
+
+      togglePassword.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          togglePassword.src = "{% static 'assets/imgs/eye.svg' %}";
+        } else {
+          passwordInput.type = "password";
+          togglePassword.src = "{% static 'assets/imgs/eye-off.svg' %}";
+        }
+      });
+    </script>
+  </body>
+</html>

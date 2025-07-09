@@ -1,0 +1,333 @@
+/* ====== SIDEBAR ====== */
+
+body.modo-alto-contraste .sidebar-menu {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .toggle-button {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .toggle-button:hover {
+  background: rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.4s ease !important;
+}
+
+/* Navegação */
+body.modo-alto-contraste .sidebar-menu a img,
+body.modo-alto-contraste .toggle-button img {
+  filter: invert(1) brightness(0) !important; /* Inverte as cores */
+  transition: all 0.4s ease !important;
+}
+
+body.modo-alto-contraste .nav-links a,
+body.modo-alto-contraste .nav-links li .selected {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .nav-links li a.selected {
+  background: rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.4s ease !important;
+}
+
+body.modo-alto-contraste .nav-links li a:hover {
+  background: rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.4s ease !important;
+}
+
+body.modo-alto-contraste .nav-links a:hover {
+  background: rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.4s ease !important;
+}
+
+body.modo-alto-contraste .dropdown-menu {
+  background-color: #ffd700 !important;
+  transition: all 0.4s ease !important;
+}
+
+/* Rodapé */
+body.modo-alto-contraste .user-content p {
+  color: #000 !important;
+}
+
+/* ====== CONTEÚDO PRINCIPAL ====== */
+
+/* Fundo da tela */
+body.modo-alto-contraste .bg-tela-inicial {
+  background-color: #000 !important;
+}
+
+body.modo-alto-contraste .tela-inicial-content {
+  background: none !important;
+}
+
+body.modo-alto-contraste .container-platafoma-txt {
+  color: #ffd700 !important;
+}
+
+/* Títulos dos gráficos */
+body.modo-alto-contraste .grafico .titulo-grafico,
+body.modo-alto-contraste .grafico-2 .titulo-grafico-2 {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+}
+
+/* ====== BORDAS DOS GRÁFICOS ====== */
+body.modo-alto-contraste .box-grafico-principal,
+body.modo-alto-contraste .box-grafico-2 {
+  background-color: #000 !important;
+  border: 2px solid #ffd700 !important;
+}
+
+/* ====== POP-UP DE SAÍDA ====== */
+body.modo-alto-contraste .modalConfirmarSaida {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+body.modo-alto-contraste input,
+body.modo-alto-contraste button,
+body.modo-alto-contraste .botao-sair,
+body.modo-alto-contraste .botao-cancelar {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border: 1px solid #ffd700 !important;
+}
+
+body.modo-alto-contraste .popup-saida {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border: 2px solid #ffd700 !important;
+}
+
+body.modo-alto-contraste .popup-tituloSaida,
+body.modo-alto-contraste .mensagem-saida {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .popup-saida .botao-sair:hover {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+  border: 1.5px solid #ffd700 !important;
+  transition: ease 0.4s ease !important;
+}
+
+body.modo-alto-contraste .popup-saida .botao-cancelar:hover {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+  border: 1.5px solid #ffd700 !important;
+  transition: ease 0.4s ease !important;
+}
+
+/* ====== POP-UP DE CONFIGURAÇÕES ====== */
+body.modo-alto-contraste .modalConfig {
+  background: rgba(0, 0, 0, 0.95) !important;
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .popup-config {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border: 2px solid #ffd700 !important;
+}
+
+body.modo-alto-contraste .popup-tituloConfig {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .mensagem-config {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .container-config {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .config-item {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .config-item input {
+  background-color: transparent !important;
+  color: #ffd700 !important;
+  border: 1px solid #ffd700 !important;
+}
+
+body.modo-alto-contraste .config-item input:focus {
+  box-shadow: 0 0 5px #ffd700 !important;
+  border-color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .config-item input::placeholder {
+  color: #ffd700 !important;
+  opacity: 0.4 !important;
+}
+
+body.modo-alto-contraste input[type="file"] {
+  background-color: transparent !important;
+  color: #ffd700 !important;
+  border: 1px solid #ffd700 !important;
+}
+
+body.modo-alto-contraste input[type="file"]::file-selector-button {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste input[type="file"]::file-selector-button:hover {
+  background-color: #ffc107 !important;
+  transition: ease 0.2s !important;
+}
+
+body.modo-alto-contraste .botao-salvar-config {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .botao-salvar-config:hover {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .botao-cancelar-config {
+  background-color: transparent !important;
+  color: #ffd700 !important;
+  border: 1.5px solid #ffd700 !important;
+}
+
+body.modo-alto-contraste .botao-cancelar-config:hover {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .search-wrapper button:hover {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+  border: 1.5px solid #ffd700 !important;
+}
+
+/* ====== MOBILE ====== */
+body.modo-alto-contraste .mobile-header {
+  background-color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .mobile-footer {
+  background-color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .mobile-header img,
+body.modo-alto-contraste .mobile-footer img {
+  filter: invert(1) brightness(0) !important;
+  transition: all 0.4s ease !important;
+}
+
+body.modo-alto-contraste .mobile-footer .dropdown-title {
+  color: #000 !important;
+}
+
+body.modo-alto-contraste .mobile-footer .links-footer a:hover,
+body.modo-alto-contraste .mobile-footer .links-footer a.selected {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ====== BUSCA DE CIDADE ====== */
+body.modo-alto-contraste .search-wrapper select {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border-color: #ffd700 !important;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffd700' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+/* Estiliza a lista de resultados da busca */
+body.modo-alto-contraste #city-search-results .city-results-list {
+  background-color: #000 !important;
+  border-color: #ffd700 !important;
+}
+
+body.modo-alto-contraste #city-search-results .city-results-list li {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste #city-search-results .city-results-list li:hover {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* Estiliza as mensagens de status da busca */
+body.modo-alto-contraste #city-search-results .city-search-message {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste #city-search-results .city-search-message.success {
+  color: #fff !important;
+}
+
+body.modo-alto-contraste .search-wrapper select option {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+}
+
+/* Ajusta o card principal do formulário e da linha do tempo */
+body.modo-alto-contraste .box-form-registro,
+body.modo-alto-contraste .log-card {
+  background-color: #000 !important;
+  border-color: #ffd700 !important;
+}
+
+/* Ajusta a parte interna escura dos cards */
+body.modo-alto-contraste .box-form-registro .inner-box-content,
+body.modo-alto-contraste .log-card {
+  background-color: #000 !important;
+}
+
+/* Ajusta o título dos cards */
+body.modo-alto-contraste .titulo-box {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border: 1px solid #ffd700;
+}
+
+/* Ajusta os labels e inputs do formulário de log */
+body.modo-alto-contraste .log-form .form-item-log label {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .log-form input,
+body.modo-alto-contraste .log-form textarea {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border-color: #ffd700 !important;
+}
+
+/* Ajusta o botão de salvar do formulário de log */
+body.modo-alto-contraste .botao-salvar-registro {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+  border: none !important;
+}
+
+body.modo-alto-contraste .botao-salvar-registro:hover {
+  background-color: #ffc107 !important;
+}
+
+/* Ajusta o conteúdo dos cards de log na timeline */
+body.modo-alto-contraste .log-card-content,
+body.modo-alto-contraste .log-card-stats p,
+body.modo-alto-contraste .log-card-notes {
+  color: #ffd700 !important;
+}
+
+body.modo-alto-contraste .log-card-date {
+  color: #fff !important; /* Damos um destaque maior para a data em branco */
+}
+
+/* Ajusta a mensagem de "nenhum registro" */
+body.modo-alto-contraste .log-card-empty {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border-color: #ffd700 !important;
+}

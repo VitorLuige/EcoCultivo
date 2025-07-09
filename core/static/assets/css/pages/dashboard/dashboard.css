@@ -1,0 +1,4 @@
+@import "../../../../assets/css/global/global.css";
+@import "./partials/sidebar.css";
+@import "./partials/tela-inicial.css";
+@import "./partials/popup.css";
